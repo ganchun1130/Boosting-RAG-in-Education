@@ -1,5 +1,5 @@
-## Boosting-RAG-in-Education
-# 集成了RAG和微调以及思维链的LLM应用程序
+# Boosting-RAG-in-Education
+## 这是一份集成了RAG和微调以及思维链的LLM应用程序
 
 在这个文档中，我们详细介绍了如何从零开始构建一个集成了RAG（Retrieval Augmented Generation）、模型微调以及思维链的大型语言模型（LLM）应用程序。我们希望通过这份实践经历，能够帮助到您。
 
