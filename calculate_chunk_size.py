@@ -9,7 +9,7 @@ from langchain.document_loaders import (UnstructuredFileLoader,
                                         PyPDFium2Loader)
 from chinese_text_splitter import ChineseTextSplitter
 
-filepath = "/usr/local/TFBOYS/gc/NLP/ChatXIaoYa_chatglm/knowledge_file/XiaoYa_Basic_Introduction.pdf"
+filepath = ""
 # 加载PDF文件
 # loader = PyMuPDFLoader(file_path=filepath)
 loader = UnstructuredPDFLoader(file_path=filepath)
