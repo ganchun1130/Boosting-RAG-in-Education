@@ -273,31 +273,31 @@ def build_ragas_data_full_CoT(csv_filename,
         write_to_json(query, answer_from_llm, context_from_retriever, ground_truth, json_filename)
 
 
-# def build_ragas_data_full_llama_index(csv_filename, knowledge_file_path, top_k, json_filename):
-#     # 读取CSV文件中的问题和答案
-#     question_list, truth_list = get_question_and_truth_from_csv(csv_filename)
-#
-#     # 定义 llm, knowledge_chain, embeddings
-#     embed_model = resolve_embed_model(f"local:{embedding_model_dict[text2vector_embedding_model]}")
-#     llm = OpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY, api_base=ChatGLM_BASE_URL)
-#
-#     query_engine_chunk, retriever_chunk = small2big_llama_index(knowledge_file_path=knowledge_file_path, llm=llm,
-#                                                                 embeddings=embed_model, top_k=top_k)
-#
-#     # 遍历问题列表
-#     for i in range(len(question_list)):
-#
-#         query = question_list[i]
-#         ground_truth = truth_list[i]
-#         print(f"正在处理第{i + 1}条数据")
-#
-#         # 调用LLM，获取答案和上下文
-#         context_from_retriever, answer_from_llm = get_answer_and_context_from_llm_llama_index(query=query,
-#                                                                                               query_engine_chunk=query_engine_chunk,
-#                                                                                               retriever_chunk=retriever_chunk)
-#         if len(answer_from_llm) == len(context_from_retriever) == 1:
-#             # 写入JSON文件
-#             write_to_json(query, answer_from_llm[0], context_from_retriever[0], ground_truth, json_filename)
+def build_ragas_data_full_llama_index(csv_filename, knowledge_file_path, top_k, json_filename):
+    # 读取CSV文件中的问题和答案
+    question_list, truth_list = get_question_and_truth_from_csv(csv_filename)
+
+    # 定义 llm, knowledge_chain, embeddings
+    embed_model = resolve_embed_model(f"local:{embedding_model_dict[text2vector_embedding_model]}")
+    llm = OpenAI(model="gpt-3.5-turbo", api_key=OPENAI_API_KEY, api_base=ChatGLM_BASE_URL)
+
+    query_engine_chunk, retriever_chunk = small2big_llama_index(knowledge_file_path=knowledge_file_path, llm=llm,
+                                                                embeddings=embed_model, top_k=top_k)
+
+    # 遍历问题列表
+    for i in range(len(question_list)):
+
+        query = question_list[i]
+        ground_truth = truth_list[i]
+        print(f"正在处理第{i + 1}条数据")
+
+        # 调用LLM，获取答案和上下文
+        context_from_retriever, answer_from_llm = get_answer_and_context_from_llm_llama_index(query=query,
+                                                                                              query_engine_chunk=query_engine_chunk,
+                                                                                              retriever_chunk=retriever_chunk)
+        if len(answer_from_llm) == len(context_from_retriever) == 1:
+            # 写入JSON文件
+            write_to_json(query, answer_from_llm[0], context_from_retriever[0], ground_truth, json_filename)
 
 
 if __name__ == '__main__':
@@ -324,43 +324,7 @@ if __name__ == '__main__':
 
     json_file_root_path = "/usr/local/TFBOYS/gc/NLP/LLM_RAG_API/Evaluation/data/"
     json_filename1 = "naive_eval_data_updated.json"
-    json_filename2 = "small2big_eval_data.json"
-    json_filename3 = "rag_fusion&naive_eval_data.json"
-    json_filename4 = "contextual_compressed_eval_data.json"
-    json_filename5 = "rag_fusion&small2big_eval_data.json"
-    json_filename6 = "rag_fusion&contextual_compression_eval_data.json"
-
-    # 7~14均可作为我的小论文中的消融实验
-    json_filename7 = "naive_eval_data_updated_14.json"
-    json_filename8 = "small2big_eval_data_14.json"
-    json_filename9 = "contextual_compressed_eval_data_14.json"
-    json_filename10 = "rag_fusion&naive_eval_data_14.json"
-    json_filename11 = "rag_fusion&small2big_eval_data_14.json"
-    json_filename12 = "rag_fusion&contextual_compression_eval_data_14.json"
-    json_filename13 = "small2big&contextual_compression_&cot_eval_data_14.json"
-    json_filename14 = "small2big&contextual_compression_&cot_eval_data_14_dedu.json"
-
-    json_filename15 = "super_retriever_real_rerank_noCOT_eval_data_14_dedu.json"
-    json_filename16 = "super_retriever_real_rerank_&COT_eval_data_14_dedu.json"
-
-    # 17~均可作为我的小论文中的实验(17-20未经过思维链)
-    json_filename17 = "naive_eval_data_updated_14_small.json"
-    json_filename18 = "small2big_eval_data_14_small.json"
-    json_filename19 = "contextual_compressed_eval_data_14_small.json"
-    json_filename20 = "small2big&contextual_compression_eval_data_14_small.json"
-
-    # 下面是经过小模型微调的(21-24未经过思维链)
-    json_filename21 = "naive_eval_data_updated_14_big_.json"
-    json_filename22 = "small2big_eval_data_14_small.json"
-    json_filename23 = "contextual_compressed_eval_data_14_small.json"
-    json_filename24 = "small2big&contextual_compression_eval_data_14_small.json"
-
-    # 下面是经过大模型微调的
-
-    # 下面是经过小/大模型微调的(25-27未经过思维链)
-    json_filename25 = "rag_fusion&small2big_eval_data_14_big_2ft.json"
-    json_filename26 = "rag_fusion&small2big_eval_data_14_big_2ft.json"
-    json_filename27 = "rag_fusion&contextual_compressed_eval_data_14_big_2ft.json"
+    
 
     # 下面是测试的
     json_filename = "test"
@@ -369,7 +333,7 @@ if __name__ == '__main__':
     logging.info("start!")
     build_ragas_data_full_langchain(csv_filename,
                                     top_k=5,
-                                    json_filename=os.path.join(json_file_root_path, json_filename),
+                                    json_filename=os.path.join(json_file_root_path, json_filename1),
                                     rag_function="rag_fusion&small",   # 如果你想使用rag_fusion,请将rag_fusion放在最前面
                                     rerank=True,
                                     knowledge_file_path=os.path.join(knowledge_file_path, knowledge_file1)
