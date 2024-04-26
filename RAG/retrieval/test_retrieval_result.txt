@@ -1,0 +1,17 @@
+2024/04/09第一次测试：
+1.使用上下文压缩，普通检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.8，top_k=10,    效果很好，可以直接检索出我想要的结果。
+2.使用上下文压缩，普通检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.8，top_k=10,   效果很好，可以直接检索出我想要的结果。
+3.使用上下文压缩，普通检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，bge-reranker-base作为过滤嵌入，similarity_threshold=0.8，top_k=10,   稀烂
+4.使用上下文压缩，普通检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，bge-reranker-base作为过滤嵌入，similarity_threshold=0.8，top_k=10,   效果一般，我的作业被放在了最后一个，这不是我想要的顺序。
+
+5.使用上下文压缩，小检大检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.8，top_k=10,      0？怒刷666。
+5.使用上下文压缩，小检大检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.5，top_k=10,         不错
+6.使用上下文压缩，小检大检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，bge-reranker-base作为过滤嵌入，similarity_threshold=0.8，top_k=10,  毫无疑问，稀烂。
+7.使用上下文压缩，小检大检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.2，top_k=10,     效果一般，返回结果太多，不过第一条的确是我想要的
+8.使用上下文压缩，小检大检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.5，top_k=10,     效果真心可以
+
+2024/04/11第二次测试：
+1.使用上下文压缩，小检大检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.5，top_k=10，reranker=bge,        已经不能用好来形容了
+2.使用上下文压缩，小检大检索器，数据库嵌入为text2vect，text2vect作为索引嵌入，text2vect作为过滤嵌入，similarity_threshold=0.6，top_k=10，reranker=bge,        删完了
+3.使用上下文压缩，小检大检索器，数据库嵌入为bge-reranker-base，bge-reranker-base作为索引嵌入，bge-reranker-base作为过滤嵌入，similarity_threshold=0.5，top_k=10，reranker=bge,  毫无疑问，稀烂。
+
