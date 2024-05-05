@@ -1,7 +1,13 @@
 # coding=utf-8
 # Implements API for Qwen-7B in OpenAI's format. (https://platform.openai.com/docs/api-reference/chat)
-# Usage: python openai_api.py
+# Usage: python openai_api.py9
 # Visit http://localhost:8000/docs for documents.
+
+
+# 以下代码是qwen官方给出的调用qwen1系列模型的api服务。
+# 非常不好意思！由于qwen官网并没有给出qwen1.5系列模型的api调用，只提供了使用vllm和ollama两种调用方式。
+# 因此我无法完成关于qwen1.5系列模型的流式输出（实在是太难了呜呜呜！）。
+# so, we suggest you to use ollama to lanuch the service!
 
 import re
 import copy
