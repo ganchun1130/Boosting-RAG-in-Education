@@ -1,11 +1,11 @@
-# Boosting-RAG-in-Education
-## 集成RAG、微调与思维链的LLM应用程序实践分享
+# 🌟🌟 Boosting-RAG-in-Education
+## 🌟 集成RAG、微调与思维链的LLM应用程序实践分享
 
 在这里，我们很高兴向您呈现一份从零到一构建集成RAG（Retrieval-Augmented Generation）、微调技术及思维链功能的LLM（Large Language Model）应用程序的实践经历。我们的目标是通过这份分享，为您提供有价值的参考与指导。
 
 ---
 
-## 使用指南
+## 🌟 使用指南
 
 ### 1. 构建知识库
 
