@@ -45,6 +45,41 @@
 
 ---
 
+## 📜 项目结构
+
+ ```python
+├── API  #  用于启动本地LLM的API服务
+│   ├── ChatGLM
+│   │   ├── api_server.py  #  启动本地模型的服务
+│   │   │ 
+│   │   └── openai_api_request.py  # 测试API服务是否启动成功
+│   │
+│   └── Qwen
+│       └── 同上
+│ 
+├── Chat
+│   ├── app.py  # 一个简单的应用程序，可以在本地编译器的命令行中与LLM交流
+│   │   
+│   └── MyLLM.py  # 用于创建本地LLM的类，当API服务启动完成后，这个类才有效果
+│    
+├── Evaluation
+│   ├── data  # 存放数据集的文件夹，这是评估数据集的   
+│   │     
+│   ├── result  # 存放评估结果      
+│   │      
+│   ├── log # 日志
+│   │   
+│   ├── calculate.py  # 计算token，本人编写的一个小脚本，用于按token数分块时的对比
+│   │   
+│   ├── MyRagasLLM.py  # 这是RAGAS需要用的LLM类，和之前的MyLLM有一点点相似  
+│   │
+│   ├── reports_functions.py # 运行RAGAS需要用的一些函数，主要是读写文件的，也算是一个脚本
+│   │ 
+│   └── run_ragas.py # 顾名思义，运行RAGAS
+...
+先更新到这吧~
+ ```
+
 ## 🌟 欢迎交流与探讨
 
 如果您有任何创意想法或是遇到疑问，非常期待与您深入交流！随时欢迎通过以下方式联系我们：
