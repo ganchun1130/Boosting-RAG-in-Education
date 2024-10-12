@@ -55,11 +55,11 @@ import json
 
 
 # 指定Parquet文件路径
-GRAPHRAG_FOLDER="/usr/local/TFBOYS/gc/NLP/LLM_RAG_API/GraphRAG/Index/storage/bge-small-zh-v1.5/artifacts"
+GRAPHRAG_FOLDER=".../artifacts"
 
 
 # 数据库连接相关参数配置
-NEO4J_URI = "neo4j://172.0.101.52:7687"
+NEO4J_URI = "neo4j://localhost:7687"
 NEO4J_USERNAME = "neo4j"
 NEO4J_PASSWORD = "testpassword"
 NEO4J_DATABASE = "neo4j"
