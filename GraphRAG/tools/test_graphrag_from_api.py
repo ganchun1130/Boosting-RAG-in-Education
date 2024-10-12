@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = "http://172.0.101.52:8012/v1/chat/completions"
+url = "http://localhost:8012/v1/chat/completions"
 headers = {"Content-Type": "application/json"}
 
 # 1、测试全局搜索  graphrag-global-search:latest
