@@ -45,7 +45,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 # 设置常量和配置  INPUT_DIR根据自己的建立graphrag的文件夹路径进行修改
-INPUT_DIR = "/usr/local/TFBOYS/gc/NLP/LLM_RAG_API/GraphRAG/Index/storage/artifacts"
+INPUT_DIR = "填写你的parquet文件的目录"
 LANCEDB_URI = f"{INPUT_DIR}/lancedb"
 COMMUNITY_REPORT_TABLE = "create_final_community_reports"
 ENTITY_TABLE = "create_final_nodes"
@@ -55,10 +55,10 @@ COVARIATE_TABLE = "create_final_covariates"
 TEXT_UNIT_TABLE = "create_final_text_units"
 COMMUNITY_LEVEL = 2
 PORT = 8012
-ollama_api_url = "http://172.0.101.52:11434/v1"
+ollama_api_url = "http://localhost:11434/v1"
 ollama_api_key = "ollama"
 llm_name = "qwen2.5:32b"
-em_name = "quentinz/bge-small-zh-v1.5:latest"
+em_name = "nomic-embed-text:latest"
 
 # 全局变量，用于存储搜索引擎和问题生成器
 local_search_engine = None
