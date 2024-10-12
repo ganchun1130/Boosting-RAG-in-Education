@@ -140,7 +140,7 @@ docker run \
 
 ### (3) 添加 APOC 插件
 
-点击 [这里](https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/5.23.0/apoc-5.23.0-extended.jar) 下载 `APOC` 插件，并将其添加到容器内部目录 `/var/lib/neo4j/plugins/` 中。
+上述操作还不足以成功可视化，neo4j需要APOC插件才能完全发挥，因此我们需要下载插件。点击 [这里](https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/5.23.0/apoc-5.23.0-extended.jar) 下载 `APOC` 插件，并将其添加到容器内部目录 `/var/lib/neo4j/plugins/` 中。
 
 ### (4) 修改 `neo4j.conf` 文件
 
@@ -163,8 +163,3 @@ docker restart neo4j
 ### (6) 运行可视化脚本
 
 运行 `create_visualization_by_neo4j.py`，然后在浏览器中访问 [localhost:7474](http://localhost:7474)，即可在 Neo4j 的可视化界面中查看生成的知识图谱。
-```
-
----
-
-通过这样的格式，内容层次更加分明，代码块、引用和链接使得可读性和美观度都得到了提升。你可以直接将此代码添加到本地的 README 文件中。
