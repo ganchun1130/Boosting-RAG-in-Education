@@ -24,40 +24,6 @@ Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tupl
 
 5. When finished, output {completion_delimiter}.
 
--Examples-
-######################
-
-Example 1:
-
-text:
-明细]可详细查看各项的参与情况。如计算的时间较长，需点击[刷新]获取计算结果。如有需要教师还可直接导出相关数据至本地。总评成绩默认情况下是学生看不到的，如果想公布总评成绩的设置和计算结果，可以将总评成绩表处的[成绩对学生不可见]开关设置修改为[成绩对学生可见]即可。
-
-克隆课程，允许教师或助教将课程资源及设置从自己教授的一个课程以追加或替换的方式克隆到另外一个课程。在[我
-------------------------
-output:
-{completion_delimiter}
-#############################
-
-
-Example 2:
-
-text:
-划线、删除线、颜色、背景等属性。点击[超链接]按钮，点击[插入链接]按钮，在弹窗中输入网址，点击[保存]，一个超链接就添加完成了。笔记支持多种段落设置方便用户进行调整，点击[工具栏]对应按钮即可进行设置。列表设置可设置为无序列表和项目编号；缩进可设置为增加或减少缩进，对齐方式有左对齐、居中、右对齐和两端对齐。笔记支持添加jpg、png、gif、bmp、jpeg格式的图片，图片添加可直接使用[Ctrl+C/V ]组合按键进行添加，也可通过附件的形式添加到笔记中，点击[
-------------------------
-output:
-{record_delimiter}
-("entity"{tuple_delimiter}超链接按钮{tuple_delimiter}UI_ELEMENT{tuple_delimiter}Button used to insert hyperlinks)
-{record_delimiter}
-("entity"{tuple_delimiter}插入链接按钮{tuple_delimiter}UI_ELEMENT{tuple_delimiter}Button used for inserting links)
-{record_delimiter}
-("entity"{tuple_delimiter}工具栏{tuple_delimiter}UI_ELEMENT{tuple_delimiter}Toolbar containing various formatting options)
-{record_delimiter}
-("entity"{tuple_delimiter}Ctrl+C/V组合按键{tuple_delimiter}KEYBOARD_SHORTCUT{tuple_delimiter}Keyboard shortcut for copying and pasting images)
-{record_delimiter}
-("relationship"{tuple_delimiter}超链接按钮{tuple_delimiter}插入链接按钮{tuple_delimiter}The 超链接 button leads to the 插入链接 button where a URL can be entered{tuple_delimiter}2)
-{record_delimiter}
-("relationship"{tuple_delimiter}Ctrl+C/V组合按键{tuple_delimiter}图片添加{tuple_delimiter}Ctrl+C/V shortcut is used for adding images to notes{tuple_delimiter}2)
-{completion_delimiter}
 
 Note: The provided text seems to be about the functionality of a note-taking or document editing application, detailing how to insert hyperlinks and images. However, it does not contain any specific named entities that fit into the predefined categories (PERSON, GEO, ORG) from the instruction. Therefore, the output focuses on UI elements and actions described in the text.
 #############################
