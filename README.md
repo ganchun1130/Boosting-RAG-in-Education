@@ -10,7 +10,7 @@
 
 最新项目地址：
 
-### [ERAG 教学助手](https://github.com/ganchun1130/ERAG)
+### [ERAG](https://github.com/ganchun1130/ERAG)
 
 新版主要更新包括：
 
